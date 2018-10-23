@@ -492,6 +492,7 @@ main(int argc, char **argv)
 					"GCR : Global Currency Reserve : G\n"
 					"GRC : GridcoinResearch : R or S\n"
 					"GRLC : Garlicoin : G\n"
+					"GRN : GreenCoin : G\n"
 					"GRS : Groestlcoin : F\n"
 					"GRV : Gravium : G\n"
 					"GUN : Guncoin : G or H\n"
@@ -506,7 +507,9 @@ main(int argc, char **argv)
 					"KORE : Kore : K\n"
 					"LBRY : LBRY : b\n"
 					"LEAF : Leafcoin : f\n"
+					"LMC : LomoCoin : L\n"
 					"LTC : Litecoin : L\n"
+					"MGD : MassGrid : M\n"
 					"MMC : Memorycoin : M\n"
 					"MNP : MNPCoin : M\n"
 					"MOG : Mogwai : M\n"
@@ -1288,6 +1291,14 @@ main(int argc, char **argv)
 					break;
 			}
 			else
+			if (strcmp(optarg, "MGD")== 0) {
+				fprintf(stderr,
+					"Generating MassGrid Address\n");
+					addrtype = 50;
+					privtype = 25;
+					break;
+			}
+			else
 			if (strcmp(optarg, "MOG")== 0) {
 				fprintf(stderr,
 					"Generating Mogwai Address\n");
@@ -1336,6 +1347,14 @@ main(int argc, char **argv)
 					break;
 			}
 			else
+			if (strcmp(optarg, "LMC")== 0) {
+				fprintf(stderr,
+					"Generating LomoCoin Address\n");
+					addrtype = 48;
+					privtype = 176;
+					break;
+			}
+			else
 			if (strcmp(optarg, "LTC")== 0) {
 				fprintf(stderr,
 					"Generating LTC Address\n");
@@ -1349,6 +1368,14 @@ main(int argc, char **argv)
 					"Generating GRLC Address\n");
 					addrtype = 38;
 					privtype = 176;
+					break;
+			}
+			else
+			if (strcmp(optarg, "GRN")== 0) {
+				fprintf(stderr,
+					"Generating GRN Address\n");
+					addrtype = 38;
+					privtype = 166;
 					break;
 			}
 			else
